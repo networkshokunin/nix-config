@@ -2,6 +2,7 @@
   imports = [
     inputs.home-manager.nixosModules.home-manager
     ./lldpd.nix
+    ./jetbrains-mono.nix
     ./locale.nix
     ./openssh.nix
     ./packages.nix

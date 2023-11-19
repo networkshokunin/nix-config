@@ -2,8 +2,10 @@
 {
   i18n.defaultLocale = "en_US.UTF-8";
   console = {
-    font = "Lat2-Terminus16";
+    earlySetup = true;
     keyMap = "us";
+    packages = with pkgs; [ jetbrains-mono ];
+    font = "${pkgs.jetbrains-mono}/share/consolefonts/JetBrainsMono-Regular.ttf"   
   };
   
   time.timeZone = "Asia/Singapore";
