@@ -81,42 +81,7 @@
   networking.hostId = "5db86182"; 
   #head -c 8 /etc/machine-id
 
-  environment.systemPackages = with pkgs; [
-    
-    #Commandline tools
-    coreutils
-    mkpasswd
-    neovim
-    git
-    dig
-
-    #Shells
-    starship
-
-    #ZSH Tools
-    zsh
-    zsh-autosuggestions
-    nix-zsh-completions
-
-  ];
-
-  # Enable zsh
-  programs.zsh = {
-    enable = true;
-    enableAutosuggestions = true;
-    syntaxHighlighting.enable = true;
-  };
-
   #Services
-
-  # ZFS services
-  services.zfs.autoSnapshot.enable = true;
-  services.zfs.autoScrub.enable = true;
-  services.zfs.trim.enable = true;
-
-  services.lldpd.enable = true;
-
-
   users.mutableUsers = false;
   users.users = {
     oscar = {
