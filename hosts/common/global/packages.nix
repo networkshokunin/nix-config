@@ -7,7 +7,10 @@
   mkpasswd
   neovim
   git
-  dig  
+  dig
+  eza
+  wget
+    
 
   #Shells
   starship

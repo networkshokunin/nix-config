@@ -47,10 +47,9 @@
     };
   };
 
-  # TODO: Set your username
   home = {
-    username = "your-username";
-    homeDirectory = "/home/your-username";
+    username = "oscar";
+    homeDirectory = "/home/oscar";
   };
 
   # Add stuff for your user as you see fit:
@@ -60,6 +59,34 @@
   # Enable home-manager and git
   programs.home-manager.enable = true;
   programs.git.enable = true;
+
+  programs.zsh = {
+    enable = true;
+    enableAutosuggestions = true;
+    enableCompletion = true;
+    dotDir = ".config/zsh";
+    syntaxHighlighting { enable = true; }
+  }
+
+  #https://github.com/starcraft66/os-config/blob/master/home-manager/programs/zsh.nix
+  shellAliases = rec {
+    ".."   = "cd ..";
+    ls      = "${pkgs.eza}/bin/exa --color=auto --group-directories-first --classify";
+    lst     = "${ls} --tree";
+    la      = "${ls} --all";
+    ll      = "${ls} --all --long --header --group";
+    llt     = "${ll} --tree";
+    tree    = "${ls} --tree";
+    cp      = "cp -iv";
+    ln      = "ln -v";
+    mkdir   = "mkdir -vp";
+    mv      = "mv -iv";
+    rm      = "rm -Iv";
+    dh      = "du -h";
+    df      = "df -h";
+    vi      = "nvim";
+    v       = "nvim"; 
+  };
 
   # Nicely reload system units when changing configs
   systemd.user.startServices = "sd-switch";
