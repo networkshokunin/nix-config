@@ -11,8 +11,6 @@
     ./zsh.nix
   ] ++ (builtins.attrValues outputs.nixosModules);
 
-  #home-manager.extraSpecialArgs = { inherit inputs outputs; };
-
   nixpkgs = {
     overlays = builtins.attrValues outputs.overlays;
     config = {
@@ -22,6 +20,15 @@
 
   hardware.enableRedistributableFirmware = true;
   #networking.domain = "s5.com";
+
+  environment.loginShellInit = ''                                                                                                    
+   # disable for user root and non-interactive tools                                                                                
+   if [ `id -u` != 0 ]; then                                                                                                        
+     if [ "x''${SSH_TTY}" != "x" ]; then                                                                                            
+       ${pkgs.neofetch}/bin/neofetch                                                                                                         
+     fi                                                                                                                             
+   fi                                                                                                                               
+  '';
 
   # Increase open file limit for sudoers
   security.pam.loginLimits = [

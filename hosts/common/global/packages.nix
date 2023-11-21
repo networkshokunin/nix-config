@@ -12,6 +12,7 @@
   wget
   fzf
   zsh-fzf-tab
+  neofetch
 
 
   #Shells

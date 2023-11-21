@@ -77,9 +77,6 @@
   # Add ZFS support.
   boot.supportedFilesystems = ["zfs"]; 
 
-  #Services
-  users.mutableUsers = false;
-
   nix.gc.automatic = true;
   nix.gc.dates = "03:15";
   system.autoUpgrade.enable = true;
