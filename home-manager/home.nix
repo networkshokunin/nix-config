@@ -65,27 +65,30 @@
     enableAutosuggestions = true;
     enableCompletion = true;
     dotDir = ".config/zsh";
-    syntaxHighlighting.enable = true;
-  }
+    syntaxHighlighting = {
+      enable = true;
+    };
+  
 
   #https://github.com/starcraft66/os-config/blob/master/home-manager/programs/zsh.nix
-  shellAliases = rec {
-    ".."   = "cd ..";
-    ls      = "${pkgs.exa}/bin/exa --color=auto --group-directories-first --classify";
-    lst     = "${ls} --tree";
-    la      = "${ls} --all";
-    ll      = "${ls} --all --long --header --group";
-    llt     = "${ll} --tree";
-    tree    = "${ls} --tree";
-    cp      = "cp -iv";
-    ln      = "ln -v";
-    mkdir   = "mkdir -vp";
-    mv      = "mv -iv";
-    rm      = "rm -Iv";
-    dh      = "du -h";
-    df      = "df -h";
-    vi      = "nvim";
-    v       = "nvim"; 
+    shellAliases = rec {
+      ".."   = "cd ..";
+      ls      = "${pkgs.exa}/bin/exa --color=auto --group-directories-first --classify";
+      lst     = "${ls} --tree";
+      la      = "${ls} --all";
+      ll      = "${ls} --all --long --header --group";
+      llt     = "${ll} --tree";
+      tree    = "${ls} --tree";
+      cp      = "cp -iv";
+      ln      = "ln -v";
+      mkdir   = "mkdir -vp";
+      mv      = "mv -iv";
+      rm      = "rm -Iv";
+      dh      = "du -h";
+      df      = "df -h";
+      vi      = "nvim";
+      v       = "nvim"; 
+    };
   };
 
   # Nicely reload system units when changing configs
