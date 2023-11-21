@@ -67,8 +67,6 @@
     };
   };
 
-  networking.hostName = "mgt1";
-
   boot.loader.systemd-boot.enable = true;
   boot.initrd.postDeviceCommands = lib.mkAfter ''
     zfs rollback -r rpool/local/root@blank
@@ -78,21 +76,9 @@
 
   # Add ZFS support.
   boot.supportedFilesystems = ["zfs"]; 
-  networking.hostId = "5db86182"; 
-  #head -c 8 /etc/machine-id
 
   #Services
   users.mutableUsers = false;
-  users.users = {
-    oscar = {
-      isNormalUser = true;
-      openssh.authorizedKeys.keys = [
-        "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJ7X82I2M5GWwCnXugSceeFn4sSUexcoth4aRkZLyzkz"
-      ];
-      passwordFile = "/persist/etc/users/oscar";
-      extraGroups = ["wheel"];
-    };
-  };
 
   nix.gc.automatic = true;
   nix.gc.dates = "03:15";

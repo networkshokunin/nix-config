@@ -21,6 +21,7 @@
     # ./users.nix
 
     ../common/global
+    inputs.home-manager.nixosModules.home-manager
 
     ./hardware-configuration.nix
   ];
@@ -81,6 +82,14 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   system.autoUpgrade.enable = true;
+
+  home-manager = {
+    extraSpecialArgs = { inherit inputs outputs; };
+    users = {
+      # Import your home-manager configuration
+      oscar = import ../../home-manager/home.nix;
+    };
+  };
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
   system.stateVersion = "23.05";

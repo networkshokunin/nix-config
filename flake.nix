@@ -67,14 +67,6 @@
         ];
       };
     };
-    home-manager = {
-      extraSpecialArgs = { inherit inputs outputs; };
-      users = {
-        # Import your home-manager configuration
-        oscar = import ../home-manager/home.nix;
-      };
-    };
-  };
-  
 
+  };
 }

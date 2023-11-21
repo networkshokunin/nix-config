@@ -71,7 +71,7 @@
   #https://github.com/starcraft66/os-config/blob/master/home-manager/programs/zsh.nix
   shellAliases = rec {
     ".."   = "cd ..";
-    ls      = "${pkgs.eza}/bin/exa --color=auto --group-directories-first --classify";
+    ls      = "${pkgs.exa}/bin/exa --color=auto --group-directories-first --classify";
     lst     = "${ls} --tree";
     la      = "${ls} --all";
     ll      = "${ls} --all --long --header --group";
