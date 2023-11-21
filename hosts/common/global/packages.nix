@@ -8,9 +8,9 @@
   neovim
   git
   dig
-  eza
+  exa
   wget
-    
+
 
   #Shells
   starship

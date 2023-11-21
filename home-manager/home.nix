@@ -65,10 +65,6 @@
     enableAutosuggestions = true;
     enableCompletion = true;
     dotDir = ".config/zsh";
-    syntaxHighlighting = {
-      enable = true;
-    };
-  
 
   #https://github.com/starcraft66/os-config/blob/master/home-manager/programs/zsh.nix
     shellAliases = rec {
