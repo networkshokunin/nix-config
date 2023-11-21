@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs-unstable, pkgs, ... }:
 {
   environment.systemPackages = with pkgs; [
   
@@ -10,6 +10,8 @@
   dig
   exa
   wget
+  fzf
+  zsh-fzf-tab
 
 
   #Shells
@@ -22,3 +24,4 @@
 
   ];
 }
+

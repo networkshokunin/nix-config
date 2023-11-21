@@ -66,6 +66,13 @@
     enableCompletion = true;
     dotDir = ".config/zsh";
 
+    plugins = [
+      {
+        name = "fzf-tab";
+        src = "${pkgs.zsh-fzf-tab}/share/fzf-tab";
+      }
+    ];
+
   #https://github.com/starcraft66/os-config/blob/master/home-manager/programs/zsh.nix
     shellAliases = rec {
       ".."   = "cd ..";
