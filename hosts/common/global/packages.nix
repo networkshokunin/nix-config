@@ -1,4 +1,4 @@
-{ pkgs, pkgs.unstable, ... }:
+{ pkgs, unstable-packages, ... }:
 {
   environment.systemPackages = with pkgs; [
   
@@ -13,6 +13,7 @@
   fzf
   zsh-fzf-tab
   neofetch
+  unstable.eza
 
 
   #Shells
@@ -26,12 +27,4 @@
   ];
 }
 
-{
-  environment.systemPackages = with pkgs.unstable; [
-  
-  #Commandline tools
-  eza
-
-  ];
-}
 
