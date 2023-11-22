@@ -1,4 +1,4 @@
-{ pkgs-unstable, pkgs, ... }:
+{ pkgs, pkgs.unstable, ... }:
 {
   environment.systemPackages = with pkgs; [
   
@@ -22,6 +22,15 @@
   zsh
   zsh-autosuggestions
   nix-zsh-completions
+
+  ];
+}
+
+{
+  environment.systemPackages = with pkgs.unstable; [
+  
+  #Commandline tools
+  eza
 
   ];
 }
