@@ -1,4 +1,4 @@
-{ pkgs, unstable-packages, ... }:
+{ pkgs, ... }:
 {
   environment.systemPackages = with pkgs; [
   
@@ -13,8 +13,6 @@
   fzf
   zsh-fzf-tab
   neofetch
-  unstable.eza
-
 
   #Shells
   starship
