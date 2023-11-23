@@ -66,6 +66,13 @@
           ./hosts/mgt1
         ];
       };
+      zwave = nixpkgs.lib.nixosSystem {
+        specialArgs = {inherit inputs outputs;};
+        modules = [
+          # > Our main nixos configuration file <
+          ./hosts/zwave
+        ];
+      };
     };
 
   };
