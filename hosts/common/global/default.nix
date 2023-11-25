@@ -45,7 +45,8 @@
       value = "1048576";
     }
   ];
-}
   #garbage collection
   nix.gc.automatic = true;
   nix.gc.dates = "03:15";  
+  
+}
