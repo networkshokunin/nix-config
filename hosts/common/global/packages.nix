@@ -21,6 +21,9 @@
   zsh
   zsh-autosuggestions
   nix-zsh-completions
+  
+  #unstable packages
+  unstable.eza
 
   ];
 }
