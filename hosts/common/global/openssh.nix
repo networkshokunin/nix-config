@@ -12,9 +12,11 @@ in
 {
   services.openssh = {
       enable = true;
-      permitRootLogin = "no";
-      StreamLocalBindUnlink = "yes";
-      passwordAuthentication = false;
+      settings = {
+        permitRootLogin = "no";
+        StreamLocalBindUnlink = "yes";
+        passwordAuthentication = false;
+      };  
 
       hostKeys = [
       {
