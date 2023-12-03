@@ -18,5 +18,5 @@
     sopsFile = ../../secrets.yaml;
     neededForUsers = true;
   };
-
+  
 }
