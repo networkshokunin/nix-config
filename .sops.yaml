@@ -1,0 +1,17 @@
+keys:
+  # Users
+  - &users:
+    - &david f150e9ccdfbcd5534edc573d0e3d78eeaa6c35c5
+  # Hosts
+  - &hosts:
+    - $
+    - &mgt1 age1hm5lf4qk84r4wh00atn6hpts7mpdx80adq26wht2e5qh9ewvhyaszfv82d
+
+
+creation_rules:
+  - path_regex: hosts/common/secrets.ya?ml$
+    key_groups:
+    - age:
+      - *mgt1
+      pgp:
+      - *david

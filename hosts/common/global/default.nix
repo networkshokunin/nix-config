@@ -7,6 +7,7 @@
     ./openssh.nix
     ./packages.nix
     ./users.nix
+    ./sops.nix
     ./zfs.nix
     ./zsh.nix
   ] ++ (builtins.attrValues outputs.nixosModules);
@@ -48,5 +49,5 @@
   #garbage collection
   nix.gc.automatic = true;
   nix.gc.dates = "03:15";  
-  
+
 }
