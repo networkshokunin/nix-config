@@ -9,6 +9,14 @@
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
     # Also see the 'unstable-packages' overlay at 'overlays/default.nix'.
 
+    hardware.url = "github:nixos/nixos-hardware";
+    impermanence.url = "github:nix-community/impermanence";
+    sops-nix = {
+      url = "github:mic92/sops-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.nixpkgs-stable.follows = "nixpkgs";
+    };
+
     # Home manager
     home-manager.url = "github:nix-community/home-manager/release-23.05";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
@@ -16,9 +24,7 @@
     # TODO: Add any other flake you might need
     # hardware.url = "github:nixos/nixos-hardware";
 
-    # Shameless plug: looking for a way to nixify your themes and make
-    # everything match nicely? Try nix-colors!
-    # nix-colors.url = "github:misterio77/nix-colors";
+
   };
 
   outputs = {

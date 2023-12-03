@@ -8,8 +8,15 @@
       openssh.authorizedKeys.keys = [
         "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJ7X82I2M5GWwCnXugSceeFn4sSUexcoth4aRkZLyzkz"
       ];
-      passwordFile = "/persist/etc/users/oscar";
+      hashedPasswordFile = config.sops.secrets.oscar-password.path;
       extraGroups = ["wheel"];
+
     };
   };
+
+  sops.secrets.oscar-password = {
+    sopsFile = ../../secrets.yaml;
+    neededForUsers = true;
+  };
+
 }
