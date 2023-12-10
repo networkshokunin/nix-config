@@ -5,7 +5,7 @@ keys:
   # Hosts
   - &hosts:
     - $
-    - &mgt1 age1hm5lf4qk84r4wh00atn6hpts7mpdx80adq26wht2e5qh9ewvhyaszfv82d
+    - &mgt1 age16nj8s2cxs7d66eehxqltg93gddp9xu7mydztyv6mz3a024eaqycq4gc2p6
 
 
 creation_rules:

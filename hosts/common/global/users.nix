@@ -15,7 +15,7 @@
   };
 
   sops.secrets.oscar-password = {
-    sopsFile = ../../secrets.yaml;
+    sopsFile = ../secrets.yaml;
     neededForUsers = true;
   };
   
