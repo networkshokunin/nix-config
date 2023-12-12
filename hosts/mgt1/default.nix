@@ -94,6 +94,7 @@
   };
 
   sops.secrets.networking-domain = {
+    format = "yaml";
     sopsFile = ../common/secrets.yaml;
   };
 
