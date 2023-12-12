@@ -94,7 +94,7 @@
   };
 
   sops.secrets.networking-domain = {
-    sopsFile = ../secrets.yaml;
+    sopsFile = ../common/secrets.yaml;
   };
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
