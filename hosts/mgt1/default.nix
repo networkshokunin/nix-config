@@ -21,7 +21,7 @@
     # ./users.nix
 
     ../common/global
-    ../common/global/users.nix
+    ../common/optional/bind.nix
     inputs.home-manager.nixosModules.home-manager
 
     ./hardware-configuration.nix
@@ -74,7 +74,6 @@
     #head -c 8 /etc/machine-id
     hostName = "mgt1";
     useDHCP = true;
-    domain = /run/secrets/domain;
   };
 
   boot.loader.systemd-boot.enable = true;
@@ -93,7 +92,7 @@
     };
   };
 
-  sops.secrets.domain = {
+  sops.secrets.networking-domain = {
     sopsFile = ../common/secrets.yaml;
   };
 
