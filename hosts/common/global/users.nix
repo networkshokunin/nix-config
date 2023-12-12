@@ -10,6 +10,7 @@
       ];
       passwordFile = config.sops.secrets.oscar-password.path;
       #mkpasswd -m sha-512
+      #https://github.com/NixOS/nixpkgs/issues/165858
       extraGroups = ["wheel"];
 
     };

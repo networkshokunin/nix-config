@@ -20,7 +20,6 @@
   };
 
   hardware.enableRedistributableFirmware = true;
-  #networking.domain = "s5.com";
 
   environment.loginShellInit = ''                                                                                                    
    # disable for user root and non-interactive tools                                                                                

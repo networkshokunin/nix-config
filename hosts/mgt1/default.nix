@@ -74,6 +74,7 @@
     #head -c 8 /etc/machine-id
     hostName = "mgt1";
     useDHCP = true;
+    domain = config.sops.secrets.networking-domain;
   };
 
   boot.loader.systemd-boot.enable = true;
@@ -95,3 +96,7 @@
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
   system.stateVersion = "23.11";
 }
+
+  sops.secrets.networking-domain = {
+    sopsFile = ../secrets.yaml;
+  };
