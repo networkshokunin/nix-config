@@ -74,7 +74,7 @@
     #head -c 8 /etc/machine-id
     hostName = "mgt1";
     useDHCP = true;
-    domain = $(cat config.sops.secrets.networking-domain.path);
+    domain = /run/secrets/networking-domain;
   };
 
   boot.loader.systemd-boot.enable = true;
