@@ -1,5 +1,5 @@
 {
-  services.lldpd = {
+  services.bind = {
     enable = true;
     listenOn = 5353;
     ipv4Only = true;
