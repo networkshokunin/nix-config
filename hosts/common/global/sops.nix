@@ -10,8 +10,7 @@ in
   ];
 
   sops = {
-    #age.sshKeyPaths = map getKeyPath keys;
-    age.keyFile = "/persist/ssh/key.txt";
+    age.sshKeyPaths = map getKeyPath keys;
     #nix eval .#nixosConfigurations.mgt1.config.sops.age.sshKeyPaths
   };
 }
