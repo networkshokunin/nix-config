@@ -74,7 +74,7 @@
     #head -c 8 /etc/machine-id
     hostName = "mgt1";
     useDHCP = true;
-    domain = config.sops.secrets.networking-domain;
+    domain = $(cat config.sops.secrets.networking-domain.path);
   };
 
   boot.loader.systemd-boot.enable = true;
@@ -94,7 +94,6 @@
   };
 
   sops.secrets.networking-domain = {
-    format = "yaml";
     sopsFile = ../common/secrets.yaml;
   };
 
