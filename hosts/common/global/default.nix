@@ -46,7 +46,11 @@
     }
   ];
   #garbage collection
-  nix.gc.automatic = true;
-  nix.gc.dates = "03:15";  
-
+  nix = {
+    gc = {
+      automatic = true;
+      dates = "weekly";
+      options = "--delete-older-than +3";
+    };
+  };
 }
