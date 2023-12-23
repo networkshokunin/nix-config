@@ -1,11 +1,11 @@
 {
   services.bind = {
     enable = true;
-    listenOn = [ "5353" ];
     ipv4Only = true;
-    extraConfig = ''
+    extraOptions = ''
      options {
        recursion no;
+       port 5353;
        allow-transfer { none; };
        dnssec-validation auto;
        auth-nxdomain no;

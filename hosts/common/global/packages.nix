@@ -8,7 +8,7 @@
   neovim
   git
   dig
-  exa
+  eza
   wget
   fzf
   zsh-fzf-tab
@@ -22,9 +22,6 @@
   zsh-autosuggestions
   nix-zsh-completions
   
-  #unstable packages
-  unstable.eza
-
   ];
 }
 
