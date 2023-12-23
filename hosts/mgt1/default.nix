@@ -21,7 +21,7 @@
     # ./users.nix
 
     ../common/global
-    .#./common/optional/bind.nix
+    #../common/optional/bind.nix
     inputs.home-manager.nixosModules.home-manager
 
     ./hardware-configuration.nix
