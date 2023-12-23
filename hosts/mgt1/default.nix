@@ -15,6 +15,7 @@
     #../common/optional/bind.nix
     ../common/optional/zfs.nix
     ../common/optional/emulatedsystems.nix
+    ../common/optional/tmux.nix
     ./hardware-configuration.nix
   ];
 

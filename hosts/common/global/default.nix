@@ -8,7 +8,6 @@
     ./packages.nix
     ./sops.nix
     ./users.nix
-    ./zfs.nix
     ./zsh.nix
   ] ++ (builtins.attrValues outputs.nixosModules);
 

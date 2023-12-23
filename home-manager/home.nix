@@ -73,6 +73,7 @@
       }
     ];
 
+
   #https://github.com/starcraft66/os-config/blob/master/home-manager/programs/zsh.nix
     shellAliases = rec {
       ".."   = "cd ..";
