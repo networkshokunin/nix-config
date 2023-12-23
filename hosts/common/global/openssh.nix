@@ -16,7 +16,7 @@ in
         PermitRootLogin = "no";
         StreamLocalBindUnlink = "yes";
         PasswordAuthentication = false;
-      #};  
+      };  
 
       hostKeys = [
       {
