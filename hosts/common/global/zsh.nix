@@ -1,7 +1,7 @@
 {
   programs.zsh = {
     enable = true;
-    autosuggestions = true;
+    autosuggestions.enable = true;
     syntaxHighlighting.enable = true;
   };
 }
