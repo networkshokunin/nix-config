@@ -68,9 +68,18 @@
           ./hosts/mgt1
         ];
       };
+
       zwave = nixpkgs.lib.nixosSystem {
+        system = "aarch64-linux";
         specialArgs = {inherit inputs outputs;};
         modules = [
+          # SD card image
+          "${nixpkgs}/nixos/modules/installer/sd-card/sd-image-aarch64.nix"
+          {
+            nixpkgs.hostPlatform.system = "aarch64-linux";
+            nixpkgs.buildPlatform.system = "x86_64-linux";
+          }
+          build.sdImage.compressImage = false;
           # > Our main nixos configuration file <
           ./hosts/zwave
         ];

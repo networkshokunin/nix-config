@@ -1,7 +1,6 @@
 { inputs, outputs, pkgs, ... }: {
   imports = [
     inputs.home-manager.nixosModules.home-manager
-    #./systemd-initrd.nix
     ./lldpd.nix
     ./jetbrains-mono.nix
     ./locale.nix
