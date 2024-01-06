@@ -13,6 +13,7 @@
     inputs.home-manager.nixosModules.home-manager
     ../common/global
     #../common/optional/bind.nix
+    ../common/optional/chrony-server.nix
     ../common/optional/zfs.nix
     ../common/optional/emulatedsystems.nix
     ../common/optional/tmux.nix
