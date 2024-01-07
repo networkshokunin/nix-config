@@ -1,7 +1,9 @@
 {
   services.chrony = {
     enable = true;
-    servers = ["0.pool.ntp.org" "1.pool.ntp.org" "2.pool.ntp.org" "3.pool.ntp.org"];
+    servers = ["ntpmon.dcs1.biz" "time.cloudflare.com"];
+    serverOption = "iburst";
+    enableNTS = true;
     }; 
   networking.firewall.allowedUDPPorts = [ 123 ];
 }
